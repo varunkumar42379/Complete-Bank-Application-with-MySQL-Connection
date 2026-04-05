@@ -1,0 +1,173 @@
+
+    double amount=0;
+
+
+    public void deposit(double amount){
+        this.amount=amount+this.amount;
+
+        System.out.println("Deposit Successfully!");
+    }
+
+
+    public double checkBalance(){
+        System.out.println("Balance : "+this.amount);
+
+        return this.amount;
+    }
+
+    public void withDraw(double amount){
+        if(this.amount<amount){
+            System.out.println("Insufficient Balance!");
+        }else {
+            this.amount=this.amount-amount;
+            System.out.println("Amount Successfully withdrawal!");
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    -----------------------------------Account-------------------------------------------
+    package org.example.model;
+
+    public class Account {
+
+        private String name;
+        private long accountNumber;
+        private String password;
+        private AccountType type;
+
+        @Override
+        public String toString() {
+            return "Account{" +
+                    "name='" + name + '\'' +
+                    ", accountNumber=" + accountNumber +
+                    ", password='" + password + '\'' +
+                    ", type=" + type +
+                    '}';
+        }
+
+        public Account(String name, long accountNumber, String password, AccountType type) {
+            this.name = name;
+            this.accountNumber = accountNumber;
+            this.password = password;
+            this.type = type;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public long getAccountNumber() {
+            return accountNumber;
+        }
+
+        public void setAccountNumber(long accountNumber) {
+            this.accountNumber = accountNumber;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+
+        public void setPassword(String password) {
+            this.password = password;
+        }
+
+        public AccountType getType() {
+            return type;
+        }
+
+        public void setType(AccountType type) {
+            this.type = type;
+        }
+    }
+
+
+--------------------------------Account Service--------------------------
+package org.example.service;
+
+public class AccountService {
+
+    double amount=0;
+
+
+    public void deposit(double amount){
+        this.amount=amount+this.amount;
+
+        System.out.println("Deposit Successfully!");
+    }
+
+
+    public double checkBalance(){
+        System.out.println("Balance : "+this.amount);
+
+        return this.amount;
+    }
+
+    public void withDraw(double amount){
+        if(this.amount<amount){
+            System.out.println("Insufficient Balance!");
+        }else {
+            this.amount=this.amount-amount;
+            System.out.println("Amount Successfully withdrawal!");
+        }
+    }
+
+}
+
+
+
+----------Enum----------------
+package org.example.model;
+
+public enum AccountType {
+    SAVINGS,SALARY,CURRENT
+}
+
+
+------------------Main----------------
+
+
+
+
+//        Account account=new Account("varun",12345,"varun@123", AccountType.SALARY);
+//
+//        System.out.println(account);
+
+
+//        AccountService service=new AccountService();
+//        service.checkBalance();
+//
+//        service.deposit(100000);
+//
+//        service.checkBalance();
+//
+//        service.withDraw(200000);
+//
+//        service.withDraw(500);
+//
+//        service.checkBalance();
