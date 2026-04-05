@@ -24,26 +24,26 @@ It helps you understand how real applications work with database integration.
 
 --------------------------------------------------
 
-📂 Project Structure
+## 📂 Project Structure
 
 bank-application/
 └── src/
-└── main/
-└── java/
-└── org/
-└── example/
-├── model/
-│ ├── Account.java
-│ └── AccountType.java
-│
-├── repository/
-│ ├── DatabaseConnection.java
-│ └── AccountRepository.java
-│
-├── service/
-│ └── AccountService.java
-│
-└── Main.java
+    └── main/
+        └── java/
+            └── org/
+                └── example/
+                    ├── model/
+                    │   ├── Account.java
+                    │   └── AccountType.java
+                    │
+                    ├── repository/
+                    │   ├── DatabaseConnection.java
+                    │   └── AccountRepository.java
+                    │
+                    ├── service/
+                    │   └── AccountService.java
+                    │
+                    └── Main.java
 
 --------------------------------------------------
 
